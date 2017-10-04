@@ -1,0 +1,193 @@
+* {
+	box-sizing: border-box;
+}
+
+#nav {
+	background-color: #ff6600;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.menu {
+	float: right;
+}
+
+#content {
+	position: relative;
+	top: 78px;
+	padding: 15px;
+}
+
+#content > .container > div {
+	padding: 78px 0;
+}
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.menu li {
+	/*把選單符號去掉*/
+	list-style-type: none;
+	border: 1px solid #fff;
+	width: 150px;
+	padding: 10px 0px;
+	text-align: center;
+	background-color: #ff6600;
+	border-radius: 8px;
+	color: #fff;
+	/*inline 元素的 width 值會被內容本身的大小控制；
+	然而，inline-block 會讓排列方向改成水平，
+	但盒子的 margin 與 padding 等屬性還是保留 block 的特色。*/
+	display: inline-block;
+}
+
+a {
+	/*需要把 a 元素的 display 屬性改為 block，
+	超連結的有效範圍才能擴張到和 li 同樣的尺寸。*/
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+
+li:hover {
+	border: 1px solid #ff6600;
+	background-color: #fff;
+}
+
+/*注意這個 CSS 選擇器*/
+li:hover a {
+	color: #ff6600;
+	font-weight: 800;
+}
+
+/*about me*/
+
+#my-avatar {
+	float: left;
+	margin-right: 20px;
+}
+
+#my-avatar img {
+	width: 220px;
+}
+
+h1 {
+	text-align: center;
+}
+
+#about h1 {
+	margin-bottom: 0;
+	text-align: left;
+}
+
+h3 {
+	margin-bottom: 0;
+}
+
+table {
+	font-size: 14px;
+	text-align: left;
+}
+
+th, td {
+	vertical-align: top;
+}
+
+hr {
+	border: 0.5px solid #eee;
+}
+
+/*my work*/
+
+.item {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 10px;
+	/*根據視窗的寬度來決定尺寸*/
+	max-width: 30%;
+}
+
+.item-info {
+	background-color: rgba(255, 255, 255, .8);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding: 25px 10px;
+
+	display: none;
+}
+
+.item:hover .item-info {
+	display: block;
+}
+
+.item img{
+	width: 100%;
+}
+
+/*my-work-gallery*/
+
+#my-work-gallery {
+	text-align: center;
+	/*這是錯的
+	margin: 0 auto;*/
+}
+
+/*contact me*/
+
+form.contact-form {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.form-row {
+	margin-bottom: 15px;
+}
+
+.form-row input, .form-row textarea {
+	border-radius: 3px;
+	width: 100%;
+	border: 1px solid #D6D9DC;
+	padding: 7px;
+}
+
+.form-row textarea {
+  resize: none;
+  height: 4em;
+}
+
+.form-row button {
+	border: none;
+	border-radius: 3px;
+	padding: 10px 15px;
+	/*游標指到的時候變成手手*/
+	cursor: pointer;
+	background-color: #5995DA;
+	color: #FFFFFF
+}
+
+/*.form-row button[type="submit"] {
+	background-color: #5995DA;
+	color: #FFFFFF;
+}*/
+
+.form-row button:hover {
+	background-color: #76AEED;
+}
+
+.form-row button:active {
+	background-color: #407FC7;
+}
+
+hr.bar {
+	border: 2px solid #ff6600;
+	width: 80px;
+}
